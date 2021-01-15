@@ -1,0 +1,131 @@
+
+/* Landing */
+
+ .carousel-fade {
+  height: 80vh;
+
+}
+
+.carousel-fade .carousel-inner {
+  z-index: 0;
+}
+
+.carousel-item .carousel-fade {
+  z-index: 1;
+
+}
+
+.text-tron {
+  z-index: 2 !important;
+  background-color: transparent;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-color: rgba(0,0,0,0.6);
+  padding: 2vh;
+  border: 0.3vh solid white;
+}
+
+.qualifications {
+  padding: 2vh;
+}
+
+/* Services */
+
+.services {
+  margin-top: 10vh;
+}
+
+.service {
+  margin-top: 5vh;
+}
+
+.service .title {
+  margin-bottom: 3vh;
+}
+
+.service .nav {
+  border-bottom: 0.3vh solid black;
+  padding-bottom: 1vh;
+}
+
+.group {
+  padding: 3vh;
+  margin-top: 3vh;
+}
+
+.packages button {
+  margin-top: 3vh;
+}
+
+.real-estate {
+  padding: 3vh;
+}
+
+.properties {
+  margin-top: 3vh;
+}
+
+.real-estate img {
+  border: 0.3vh solid black;
+}
+
+.locations img {
+  width: 3.5rem;
+  border: none;
+}
+
+.locations button {
+  width: auto;
+  padding: 2vh;
+  margin: 2vh;
+}
+
+@media only screen and (max-width: 768px) {
+  .landing-area {
+    display: none;
+  }
+
+  .mobile-landing {
+    display: flex !important;
+    height: 70vh;
+    background-image: url("../../images/Summerland-18-min.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+  }
+
+  .mobile-text {
+    background-color: rgba(0,0,0,0.6);
+    padding: 2vh;
+    border: 0.3vh solid white;
+    margin: 1vh;
+  }
+
+  .real-estate img {
+    margin-top: 5vh;
+  }
+
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 568px) {
+
+  footer .tab-content .d-flex {
+    display: flex;
+    flex-direction: column !important;
+  }
+  .contact-bar {
+    display: none !important;
+  }
+
+}
+
+
+@media only screen and (min-width: 482px) {
+  .nav-link-contact {
+    display: none;
+  }
+}

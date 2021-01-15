@@ -1,0 +1,100 @@
+body {
+  font-size: 2.1vh;
+  font-family: 'Niramit', sans-serif;
+}
+
+footer {
+  margin-top: 10vh;
+}
+
+@media only screen and (max-width: 568px) {
+  .contact-navi button {
+    font-size: 2vh;
+  }
+}
+
+.landing-area-delivery {
+  background-image: url("../../resources/images/zing1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+}
+
+.landing-area-book {
+  background-image: url("../../resources/images/Summerland-7-min.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+}
+
+.landing-area-terms {
+  background-image: url("../../resources/images/DJI_0220.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40vh;
+  color: white;
+}
+
+.contact-book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.contact-bar a {
+  margin: 1vh;
+}
+
+.contact-navi a {
+  margin: 1vh;
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 481px) {
+  footer .nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-bar {
+    display: none;
+  }
+
+
+
+}
+
+@media only screen and (min-width: 482px) {
+  .nav-link-contact {
+    display: none;
+  }
+}
+
+
+/* FAQ on Delivery */
+
+.faq .card {
+  background-color: #7f00ff;
+  border: none !important;
+  color: white;
+  margin: 2vh;
+}
+
+.platform .card {
+  padding: 2vh;
+  margin: 1vh;
+}
+
+.faq .card-header button {
+  color: white !important;
+}
+
+.faq {
+  border: none;
+}

@@ -1,0 +1,86 @@
+/* Home Landing Area */
+
+.landing {
+  height: 70vh;
+  background-image: url("../../images/DJI_0169.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Landing */
+
+.landing {
+  color: white;
+}
+
+/* Cards */
+
+.card .services-section {
+  margin: 2vh;
+}
+
+.services-section {
+  margin-top: 5vh;
+}
+
+.services-section h2 {
+  margin-bottom: 3vh;
+}
+
+.reviews {
+  margin-top: 5vh;
+  padding-top: 5vh;
+}
+
+.review-title {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.review-title h2 {
+  padding: 2vh;
+}
+
+.reviews {
+  padding-bottom: 10vh;
+  background-image: url("../../images/Summerland-18-min.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card .img-link:hover {
+  opacity: 0.8;
+}
+
+.contact-bar a {
+  margin: 1vh;
+}
+
+.contact-navi a {
+  margin: 1vh;
+}
+
+
+
+
+
+@media only screen and (min-width: 0px) and (max-width: 568px) {
+
+  footer .tab-content .d-flex {
+    display: flex;
+    flex-direction: column !important;
+  }
+  .contact-bar {
+    display: none !important;
+  }
+
+}
+
+
+@media only screen and (min-width: 482px) {
+  .nav-link-contact {
+    display: none;
+  }
+}

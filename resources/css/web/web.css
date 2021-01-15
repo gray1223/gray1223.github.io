@@ -1,0 +1,122 @@
+
+/* Landing */
+
+.landing-area {
+  background-image: url("../../../resources/images/webdesign.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+}
+
+body {
+  background-color: #282828;
+}
+
+.text-tron {
+  padding: 2vh;
+}
+
+.service {
+  padding: 4vh;
+  border-radius: 5vh;
+  background-color: white;
+}
+
+.bar {
+  padding: 2vh;
+}
+
+/* Services */
+
+.services {
+  margin-top: 10vh;
+}
+
+.service {
+  margin-top: 5vh;
+}
+
+.service .title {
+  margin-bottom: 3vh;
+}
+
+.service .nav {
+  border-bottom: 0.3vh solid black;
+  padding-bottom: 1vh;
+}
+
+.group {
+  padding: 3vh;
+  margin-top: 3vh;
+}
+
+.packages button {
+  margin-top: 3vh;
+}
+
+.real-estate {
+  padding: 3vh;
+}
+
+.properties {
+  margin-top: 3vh;
+}
+
+.real-estate img {
+  border: 0.3vh solid black;
+}
+
+.locations img {
+  width: 3.5rem;
+  border: none;
+}
+
+.locations button {
+  width: auto;
+  padding: 2vh;
+  margin: 2vh;
+}
+
+.contact-buttons button {
+  margin-right: 2vh;
+}
+
+.website {
+  border-top: 0.3vh solid black;
+  padding: 3vh;
+}
+
+.website img {
+  padding-top: 2vh;
+}
+
+.website img:hover {
+  opacity: 0.8;
+}
+
+.testimonials {
+  margin-top: 5vh;
+  border-radius: 5vh;
+  padding: 3vh;
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 568px) {
+
+  footer .tab-content .d-flex {
+    display: flex;
+    flex-direction: column !important;
+  }
+  .contact-bar {
+    display: none !important;
+  }
+
+}
+
+
+@media only screen and (min-width: 482px) {
+  .nav-link-contact {
+    display: none;
+  }
+}
