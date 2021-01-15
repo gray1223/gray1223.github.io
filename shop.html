@@ -12,6 +12,10 @@
     <link href="./resources/css/aerial/aerial.css" rel=stylesheet type="text/css" />
     <link href="./resources/css/global.css" rel=stylesheet type="text/css" />
 
+    <!-- Javascript Links -->
+    <script src="https://js.stripe.com/v3"></script>
+
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <title>Photo Shop</title>
@@ -105,57 +109,55 @@
         </div>
       </div>
 
-      <!-- Load Stripe.js on your website. -->
-<script src="https://js.stripe.com/v3"></script>
 
-<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-<button
-  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-  id="checkout-button-price_1IA0BJGrd1ppQSttNHp7O6mc"
-  role="link"
-  type="button"
->
-  Checkout
-</button>
+      <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+      <button
+        style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+        id="checkout-button-price_1IA0BJGrd1ppQSttNHp7O6mc"
+        role="link"
+        type="button"
+      >
+        Checkout
+      </button>
 
-<div id="error-message"></div>
+      <div id="error-message"></div>
 
-<script>
-(function() {
-  var stripe = Stripe('pk_live_51HXYKYGrd1ppQStt3mZYCKLQbK9qzQOuubKiSKluhqq040porS8EuSoi9YtR0iedMGeUAKcnFORNC6a8iy3QFQhI00c2KiRJYE');
+      <script>
+      (function() {
+        var stripe = Stripe('pk_live_51HXYKYGrd1ppQStt3mZYCKLQbK9qzQOuubKiSKluhqq040porS8EuSoi9YtR0iedMGeUAKcnFORNC6a8iy3QFQhI00c2KiRJYE');
 
-  var checkoutButton = document.getElementById('checkout-button-price_1IA0BJGrd1ppQSttNHp7O6mc');
-  checkoutButton.addEventListener('click', function () {
-    /*
-     * When the customer clicks on the button, redirect
-     * them to Checkout.
-     */
-    stripe.redirectToCheckout({
-      lineItems: [{price: 'price_1IA0BJGrd1ppQSttNHp7O6mc', quantity: 1}],
-      mode: 'payment',
-      /*
-       * Do not rely on the redirect to the successUrl for fulfilling
-       * purchases, customers may not always reach the success_url after
-       * a successful payment.
-       * Instead use one of the strategies described in
-       * https://stripe.com/docs/payments/checkout/fulfill-orders
-       */
-      successUrl: window.location.protocol + '//grayaerialvisual.com/success',
-      cancelUrl: window.location.protocol + '//grayaerialvisual.com/canceled',
-    })
-    .then(function (result) {
-      if (result.error) {
-        /*
-         * If `redirectToCheckout` fails due to a browser or network
-         * error, display the localized error message to your customer.
-         */
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-})();
-</script>
+        var checkoutButton = document.getElementById('checkout-button-price_1IA0BJGrd1ppQSttNHp7O6mc');
+        checkoutButton.addEventListener('click', function () {
+          /*
+           * When the customer clicks on the button, redirect
+           * them to Checkout.
+           */
+          stripe.redirectToCheckout({
+            lineItems: [{price: 'price_1IA0BJGrd1ppQSttNHp7O6mc', quantity: 1}],
+            mode: 'payment',
+            /*
+             * Do not rely on the redirect to the successUrl for fulfilling
+             * purchases, customers may not always reach the success_url after
+             * a successful payment.
+             * Instead use one of the strategies described in
+             * https://stripe.com/docs/payments/checkout/fulfill-orders
+             */
+            successUrl: window.location.protocol + '//grayaerialvisual.com/success',
+            cancelUrl: window.location.protocol + '//grayaerialvisual.com/canceled',
+          })
+          .then(function (result) {
+            if (result.error) {
+              /*
+               * If `redirectToCheckout` fails due to a browser or network
+               * error, display the localized error message to your customer.
+               */
+              var displayError = document.getElementById('error-message');
+              displayError.textContent = result.error.message;
+            }
+          });
+        });
+      })();
+      </script>
 
 
       <!-- Types of Services -->
