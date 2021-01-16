@@ -168,66 +168,98 @@
         <div class="group row">
           <div class="col-sm-6 col-xs-12">
             <h3>Cotton Candy</h3>
-            <br><br>
+
+            <h5>Description</h5>
             <p>
               <ul>
                 <li>Taken on January 14, 2021</li>
                 <li>Resolution: 3992x2242 @ 72 dpi</li>
                 <li>Shot on Mavic Pro Platinum</li>
               </ul>
+              <h5>Purchase Options:</h5>
 
-              <!-- Load Stripe.js on your website. -->
-<script src="https://js.stripe.com/v3"></script>
+              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link active" id="pills-digital-tab" data-toggle="pill" href="#pills-digital" role="tab" aria-controls="pills-digital" aria-selected="true">Digital</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="pills-print-tab" data-toggle="pill" href="#pills-print" role="tab" aria-controls="pills-print" aria-selected="false">Print</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="pills-canvas-tab" data-toggle="pill" href="#pills-canvas" role="tab" aria-controls="pills-canvas" aria-selected="false">Canvas</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
 
-<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-<button
-  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-  id="checkout-button-price_1IA0BJGrd1ppQSttNHp7O6mc"
-  role="link"
-  type="button"
->
-  Checkout
-</button>
+                <!-- Real Estate Photography -->
 
-<div id="error-message"></div>
+                <div class="tab-pane fade show active bg-light text-center" id="pills-digital" role="tabpanel" aria-labelledby="pills-digital-tab">
+                  <h5 class="text-center" style='padding:2vh;'>Digital Downloads</h5>
 
-<script>
-(function() {
-  var stripe = Stripe('pk_live_51HXYKYGrd1ppQStt3mZYCKLQbK9qzQOuubKiSKluhqq040porS8EuSoi9YtR0iedMGeUAKcnFORNC6a8iy3QFQhI00c2KiRJYE');
+                  <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+                  <button
+                    style="background-color:#6772E5;color:#FFF;margin:2vh;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+                    id="checkout-button-price_1IA0BJGrd1ppQSttNHp7O6mc"
+                    role="link"
+                    type="button"
 
-  var checkoutButton = document.getElementById('checkout-button-price_1IA0BJGrd1ppQSttNHp7O6mc');
-  checkoutButton.addEventListener('click', function () {
-    /*
-     * When the customer clicks on the button, redirect
-     * them to Checkout.
-     */
-    stripe.redirectToCheckout({
-      lineItems: [{price: 'price_1IA0BJGrd1ppQSttNHp7O6mc', quantity: 1}],
-      mode: 'payment',
-      /*
-       * Do not rely on the redirect to the successUrl for fulfilling
-       * purchases, customers may not always reach the success_url after
-       * a successful payment.
-       * Instead use one of the strategies described in
-       * https://stripe.com/docs/payments/checkout/fulfill-orders
-       */
-      successUrl: window.location.protocol + '//grayaerialvisual.com/success',
-      cancelUrl: window.location.protocol + '//grayaerialvisual.com/canceled',
-      submitType: 'Purchase Digital Download',
-    })
-    .then(function (result) {
-      if (result.error) {
-        /*
-         * If `redirectToCheckout` fails due to a browser or network
-         * error, display the localized error message to your customer.
-         */
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-})();
-</script>
+                  >
+                    Purchase Digital Photo
+                  </button>
+
+                  <div id="error-message"></div>
+
+                  <script>
+                  (function() {
+                    var stripe = Stripe('pk_live_51HXYKYGrd1ppQStt3mZYCKLQbK9qzQOuubKiSKluhqq040porS8EuSoi9YtR0iedMGeUAKcnFORNC6a8iy3QFQhI00c2KiRJYE');
+
+                    var checkoutButton = document.getElementById('checkout-button-price_1IA0BJGrd1ppQSttNHp7O6mc');
+                    checkoutButton.addEventListener('click', function () {
+                      /*
+                       * When the customer clicks on the button, redirect
+                       * them to Checkout.
+                       */
+                      stripe.redirectToCheckout({
+                        lineItems: [{price: 'price_1IA0BJGrd1ppQSttNHp7O6mc', quantity: 1}],
+                        mode: 'payment',
+                        /*
+                         * Do not rely on the redirect to the successUrl for fulfilling
+                         * purchases, customers may not always reach the success_url after
+                         * a successful payment.
+                         * Instead use one of the strategies described in
+                         * https://stripe.com/docs/payments/checkout/fulfill-orders
+                         */
+                        successUrl: window.location.protocol + '//grayaerialvisual.com/success',
+                        cancelUrl: window.location.protocol + '//grayaerialvisual.com/canceled',
+                      })
+                      .then(function (result) {
+                        if (result.error) {
+                          /*
+                           * If `redirectToCheckout` fails due to a browser or network
+                           * error, display the localized error message to your customer.
+                           */
+                          var displayError = document.getElementById('error-message');
+                          displayError.textContent = result.error.message;
+                        }
+                      });
+                    });
+                  })();
+                  </script>
+                </div>
+
+
+                <div class="tab-pane packages container fade bg-light" id="pills-print" role="tabpanel" aria-labelledby="pills-print-tab">
+                  <h3 class="text-center" style='padding:2vh;'>Prints</h3>
+
+
+                </div>
+
+
+                <div class="tab-pane fade container bg-light" id="pills-canvas" role="tabpanel" aria-labelledby="pills-canvas-tab">
+                  <h3 class="text-center" style='padding:2vh;'>Canvas</h3>
+                </div>
+              </div>
+
             </p>
           </div>
           <div class="col-xs-12 col-sm-6">
