@@ -424,12 +424,12 @@
 
                   <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
                   <button
-                    style="background-color:#6772E5;color:#FFF;padding:8px 12px;margin:2vh;border:0;border-radius:4px;font-size:1em"
-                    id="checkout-button-price_1IA59PGrd1ppQSttmbeK62Ei"
+                    style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+                    id="checkout-button-price_1IA71pGrd1ppQSttJ4flJYJb"
                     role="link"
                     type="button"
                   >
-                    Purchase 8x12 Canvas Print
+                    Purchase 8x12 Canvas
                   </button>
 
                   <div id="error-message"></div>
@@ -438,14 +438,14 @@
                   (function() {
                     var stripe = Stripe('pk_live_51HXYKYGrd1ppQStt3mZYCKLQbK9qzQOuubKiSKluhqq040porS8EuSoi9YtR0iedMGeUAKcnFORNC6a8iy3QFQhI00c2KiRJYE');
 
-                    var checkoutButton = document.getElementById('checkout-button-price_1IA59PGrd1ppQSttmbeK62Ei');
+                    var checkoutButton = document.getElementById('checkout-button-price_1IA71pGrd1ppQSttJ4flJYJb');
                     checkoutButton.addEventListener('click', function () {
                       /*
                        * When the customer clicks on the button, redirect
                        * them to Checkout.
                        */
                       stripe.redirectToCheckout({
-                        lineItems: [{price: 'price_1IA59PGrd1ppQSttmbeK62Ei', quantity: 1}],
+                        lineItems: [{price: 'price_1IA71pGrd1ppQSttJ4flJYJb', quantity: 1}],
                         mode: 'payment',
                         /*
                          * Do not rely on the redirect to the successUrl for fulfilling
@@ -456,7 +456,9 @@
                          */
                         successUrl: window.location.protocol + '//grayaerialvisual.com/success',
                         cancelUrl: window.location.protocol + '//grayaerialvisual.com/canceled',
-                        billingAddressCollection: 'required',
+                        shippingAddressCollection: {
+                          allowedCountries: ['US', 'CA'],
+                        }
                       })
                       .then(function (result) {
                         if (result.error) {
@@ -474,12 +476,12 @@
 
                   <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
                   <button
-                    style="background-color:#6772E5;color:#FFF;padding:8px 12px;margin:2vh;border:0;border-radius:4px;font-size:1em"
-                    id="checkout-button-price_1IA5VJGrd1ppQStt0KgnyTIj"
+                    style="background-color:#6772E5;margin:2vh;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+                    id="checkout-button-price_1IA6nqGrd1ppQStt8PSQUama"
                     role="link"
                     type="button"
                   >
-                    Purchase 12x16 Canvas Print
+                    Purchase 12x16 Canvas
                   </button>
 
                   <div id="error-message"></div>
@@ -488,14 +490,14 @@
                   (function() {
                     var stripe = Stripe('pk_live_51HXYKYGrd1ppQStt3mZYCKLQbK9qzQOuubKiSKluhqq040porS8EuSoi9YtR0iedMGeUAKcnFORNC6a8iy3QFQhI00c2KiRJYE');
 
-                    var checkoutButton = document.getElementById('checkout-button-price_1IA5VJGrd1ppQStt0KgnyTIj');
+                    var checkoutButton = document.getElementById('checkout-button-price_1IA6nqGrd1ppQStt8PSQUama');
                     checkoutButton.addEventListener('click', function () {
                       /*
                        * When the customer clicks on the button, redirect
                        * them to Checkout.
                        */
                       stripe.redirectToCheckout({
-                        lineItems: [{price: 'price_1IA5VJGrd1ppQStt0KgnyTIj', quantity: 1}],
+                        lineItems: [{price: 'price_1IA6nqGrd1ppQStt8PSQUama', quantity: 1}],
                         mode: 'payment',
                         /*
                          * Do not rely on the redirect to the successUrl for fulfilling
@@ -506,7 +508,9 @@
                          */
                         successUrl: window.location.protocol + '//grayaerialvisual.com/success',
                         cancelUrl: window.location.protocol + '//grayaerialvisual.com/canceled',
-                        billingAddressCollection: 'required',
+                        shippingAddressCollection: {
+                          allowedCountries: ['US', 'CA'],
+                        }
                       })
                       .then(function (result) {
                         if (result.error) {
@@ -522,17 +526,15 @@
                   })();
                   </script>
 
-                  <!-- Load Stripe.js on your website. -->
-                  <script src="https://js.stripe.com/v3"></script>
 
                   <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
                   <button
-                    style="background-color:#6772E5;color:#FFF;padding:8px 12px;margin:2vh;border:0;border-radius:4px;font-size:1em"
-                    id="checkout-button-price_1IA5WvGrd1ppQSttDpxlb8Rq"
+                    style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+                    id="checkout-button-price_1IA6oCGrd1ppQSttYjewINYA"
                     role="link"
                     type="button"
                   >
-                    Purchase 16x24 Canvas Print
+                    Purchase 16x24 Canvas
                   </button>
 
                   <div id="error-message"></div>
@@ -541,14 +543,14 @@
                   (function() {
                     var stripe = Stripe('pk_live_51HXYKYGrd1ppQStt3mZYCKLQbK9qzQOuubKiSKluhqq040porS8EuSoi9YtR0iedMGeUAKcnFORNC6a8iy3QFQhI00c2KiRJYE');
 
-                    var checkoutButton = document.getElementById('checkout-button-price_1IA5WvGrd1ppQSttDpxlb8Rq');
+                    var checkoutButton = document.getElementById('checkout-button-price_1IA6oCGrd1ppQSttYjewINYA');
                     checkoutButton.addEventListener('click', function () {
                       /*
                        * When the customer clicks on the button, redirect
                        * them to Checkout.
                        */
                       stripe.redirectToCheckout({
-                        lineItems: [{price: 'price_1IA5WvGrd1ppQSttDpxlb8Rq', quantity: 1}],
+                        lineItems: [{price: 'price_1IA6oCGrd1ppQSttYjewINYA', quantity: 1}],
                         mode: 'payment',
                         /*
                          * Do not rely on the redirect to the successUrl for fulfilling
@@ -559,7 +561,9 @@
                          */
                         successUrl: window.location.protocol + '//grayaerialvisual.com/success',
                         cancelUrl: window.location.protocol + '//grayaerialvisual.com/canceled',
-                        billingAddressCollection: 'required',
+                        shippingAddressCollection: {
+                          allowedCountries: ['US', 'CA'],
+                        }
                       })
                       .then(function (result) {
                         if (result.error) {
@@ -574,14 +578,15 @@
                     });
                   })();
                   </script>
+
                   <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
                   <button
-                    style="background-color:#6772E5;color:#FFF;margin:2vh;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-                    id="checkout-button-price_1IA5eqGrd1ppQSttIoz5WvS8"
+                    style="background-color:#6772E5;margin:2vh;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+                    id="checkout-button-price_1IA6odGrd1ppQSttiwbAnj1Y"
                     role="link"
                     type="button"
                   >
-                    Purchase 24x36 Canvas Print
+                    Purchase 24x36 Canvas
                   </button>
 
                   <div id="error-message"></div>
@@ -590,14 +595,14 @@
                   (function() {
                     var stripe = Stripe('pk_live_51HXYKYGrd1ppQStt3mZYCKLQbK9qzQOuubKiSKluhqq040porS8EuSoi9YtR0iedMGeUAKcnFORNC6a8iy3QFQhI00c2KiRJYE');
 
-                    var checkoutButton = document.getElementById('checkout-button-price_1IA5eqGrd1ppQSttIoz5WvS8');
+                    var checkoutButton = document.getElementById('checkout-button-price_1IA6odGrd1ppQSttiwbAnj1Y');
                     checkoutButton.addEventListener('click', function () {
                       /*
                        * When the customer clicks on the button, redirect
                        * them to Checkout.
                        */
                       stripe.redirectToCheckout({
-                        lineItems: [{price: 'price_1IA5eqGrd1ppQSttIoz5WvS8', quantity: 1}],
+                        lineItems: [{price: 'price_1IA6odGrd1ppQSttiwbAnj1Y', quantity: 1}],
                         mode: 'payment',
                         /*
                          * Do not rely on the redirect to the successUrl for fulfilling
@@ -608,7 +613,9 @@
                          */
                         successUrl: window.location.protocol + '//grayaerialvisual.com/success',
                         cancelUrl: window.location.protocol + '//grayaerialvisual.com/canceled',
-                        billingAddressCollection: 'required',
+                        shippingAddressCollection: {
+                          allowedCountries: ['US', 'CA'],
+                        }
                       })
                       .then(function (result) {
                         if (result.error) {
