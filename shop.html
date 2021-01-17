@@ -1597,6 +1597,485 @@
           </div>
         </div>
 
+        <div class="group row">
+          <div class="col-sm-6 col-xs-12">
+            <h3>Sunglow</h3>
+
+            <h5>Description</h5>
+            <p>
+              <ul>
+                <li>Taken on January 16, 2021</li>
+                <li>Resolution: 3992x2242 @ 72 dpi</li>
+                <li>Shot on Mavic Pro Platinum</li>
+              </ul>
+              <h5>Purchase Options:</h5>
+
+              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link active" id="pills-digitalsun-tab" data-toggle="pill" href="#pills-digitalsun" role="tab" aria-controls="pills-digitalsun" aria-selected="true">Digital</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="pills-printsun-tab" data-toggle="pill" href="#pills-printsun" role="tab" aria-controls="pills-printsun" aria-selected="false">Print</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="pills-canvassun-tab" data-toggle="pill" href="#pills-canvassun" role="tab" aria-controls="pills-canvassun" aria-selected="false">Canvas</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+
+                <!-- Digital Downloads -->
+
+                <div class="tab-pane fade show active bg-light text-center" id="pills-digitalsun" role="tabpanel" aria-labelledby="pills-digitalsun-tab">
+                  <h5 class="text-center" style='padding:2vh;'>Digital Downloads</h5>
+
+
+                  <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+                  <button
+                    style="background-color:#6772E5;margin:2vh;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+                    id="checkout-button-price_1IAOkBGrd1ppQStt0uSQ13zO"
+                    role="link"
+                    type="button"
+                  >
+                    Purchase Digital 4K Image
+                  </button>
+
+                  <div id="error-message"></div>
+
+                  <script>
+                  (function() {
+                    var stripe = Stripe('pk_live_51HXYKYGrd1ppQStt3mZYCKLQbK9qzQOuubKiSKluhqq040porS8EuSoi9YtR0iedMGeUAKcnFORNC6a8iy3QFQhI00c2KiRJYE');
+
+                    var checkoutButton = document.getElementById('checkout-button-price_1IAOkBGrd1ppQStt0uSQ13zO');
+                    checkoutButton.addEventListener('click', function () {
+                      /*
+                       * When the customer clicks on the button, redirect
+                       * them to Checkout.
+                       */
+                      stripe.redirectToCheckout({
+                        lineItems: [{price: 'price_1IAOkBGrd1ppQStt0uSQ13zO', quantity: 1}],
+                        mode: 'payment',
+                        /*
+                         * Do not rely on the redirect to the successUrl for fulfilling
+                         * purchases, customers may not always reach the success_url after
+                         * a successful payment.
+                         * Instead use one of the strategies described in
+                         * https://stripe.com/docs/payments/checkout/fulfill-orders
+                         */
+                        successUrl: window.location.protocol + '//grayaerialvisual.com/success',
+                        cancelUrl: window.location.protocol + '//grayaerialvisual.com/canceled',
+                        shippingAddressCollection: {
+                          allowedCountries: ['US', 'CA'],
+                        }
+                      })
+                      .then(function (result) {
+                        if (result.error) {
+                          /*
+                           * If `redirectToCheckout` fails due to a browser or network
+                           * error, display the localized error message to your customer.
+                           */
+                          var displayError = document.getElementById('error-message');
+                          displayError.textContent = result.error.message;
+                        }
+                      });
+                    });
+                  })();
+                  </script>
+
+                </div>
+
+
+                <div class="tab-pane packages container fade bg-light text-center" style="padding:2vh;" id="pills-printsun" role="tabpanel" aria-labelledby="pills-printsun-tab">
+                  <h5 class="text-center" style='padding:2vh;'>Prints</h5>
+
+
+                  <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+                  <button
+                    style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+                    id="checkout-button-price_1IAOkQGrd1ppQSttkk2Bu6Uo"
+                    role="link"
+                    type="button"
+                  >
+                    Purchase 4x6 Print
+                  </button>
+
+                  <div id="error-message"></div>
+
+                  <script>
+                  (function() {
+                    var stripe = Stripe('pk_live_51HXYKYGrd1ppQStt3mZYCKLQbK9qzQOuubKiSKluhqq040porS8EuSoi9YtR0iedMGeUAKcnFORNC6a8iy3QFQhI00c2KiRJYE');
+
+                    var checkoutButton = document.getElementById('checkout-button-price_1IAOkQGrd1ppQSttkk2Bu6Uo');
+                    checkoutButton.addEventListener('click', function () {
+                      /*
+                       * When the customer clicks on the button, redirect
+                       * them to Checkout.
+                       */
+                      stripe.redirectToCheckout({
+                        lineItems: [{price: 'price_1IAOkQGrd1ppQSttkk2Bu6Uo', quantity: 1}],
+                        mode: 'payment',
+                        /*
+                         * Do not rely on the redirect to the successUrl for fulfilling
+                         * purchases, customers may not always reach the success_url after
+                         * a successful payment.
+                         * Instead use one of the strategies described in
+                         * https://stripe.com/docs/payments/checkout/fulfill-orders
+                         */
+                        successUrl: window.location.protocol + '//grayaerialvisual.com/success',
+                        cancelUrl: window.location.protocol + '//grayaerialvisual.com/canceled',
+                        shippingAddressCollection: {
+                          allowedCountries: ['US', 'CA'],
+                        }
+                      })
+                      .then(function (result) {
+                        if (result.error) {
+                          /*
+                           * If `redirectToCheckout` fails due to a browser or network
+                           * error, display the localized error message to your customer.
+                           */
+                          var displayError = document.getElementById('error-message');
+                          displayError.textContent = result.error.message;
+                        }
+                      });
+                    });
+                  })();
+                  </script>
+
+
+                  <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+                  <button
+                    style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+                    id="checkout-button-price_1IAOkcGrd1ppQStt8mPjHIo2"
+                    role="link"
+                    type="button"
+                  >
+                    Purchase 5x7 Print
+                  </button>
+
+                  <div id="error-message"></div>
+
+                  <script>
+                  (function() {
+                    var stripe = Stripe('pk_live_51HXYKYGrd1ppQStt3mZYCKLQbK9qzQOuubKiSKluhqq040porS8EuSoi9YtR0iedMGeUAKcnFORNC6a8iy3QFQhI00c2KiRJYE');
+
+                    var checkoutButton = document.getElementById('checkout-button-price_1IAOkcGrd1ppQStt8mPjHIo2');
+                    checkoutButton.addEventListener('click', function () {
+                      /*
+                       * When the customer clicks on the button, redirect
+                       * them to Checkout.
+                       */
+                      stripe.redirectToCheckout({
+                        lineItems: [{price: 'price_1IAOkcGrd1ppQStt8mPjHIo2', quantity: 1}],
+                        mode: 'payment',
+                        /*
+                         * Do not rely on the redirect to the successUrl for fulfilling
+                         * purchases, customers may not always reach the success_url after
+                         * a successful payment.
+                         * Instead use one of the strategies described in
+                         * https://stripe.com/docs/payments/checkout/fulfill-orders
+                         */
+                        successUrl: window.location.protocol + '//grayaerialvisual.com/success',
+                        cancelUrl: window.location.protocol + '//grayaerialvisual.com/canceled',
+                        shippingAddressCollection: {
+                          allowedCountries: ['US', 'CA'],
+                        }
+                      })
+                      .then(function (result) {
+                        if (result.error) {
+                          /*
+                           * If `redirectToCheckout` fails due to a browser or network
+                           * error, display the localized error message to your customer.
+                           */
+                          var displayError = document.getElementById('error-message');
+                          displayError.textContent = result.error.message;
+                        }
+                      });
+                    });
+                  })();
+                  </script>
+
+
+
+                  <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+                  <button
+                    style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+                    id="checkout-button-price_1IAOkpGrd1ppQSttP8Zpfutv"
+                    role="link"
+                    type="button"
+                  >
+                    Purchase 8x10 Print
+                  </button>
+
+                  <div id="error-message"></div>
+
+                  <script>
+                  (function() {
+                    var stripe = Stripe('pk_live_51HXYKYGrd1ppQStt3mZYCKLQbK9qzQOuubKiSKluhqq040porS8EuSoi9YtR0iedMGeUAKcnFORNC6a8iy3QFQhI00c2KiRJYE');
+
+                    var checkoutButton = document.getElementById('checkout-button-price_1IAOkpGrd1ppQSttP8Zpfutv');
+                    checkoutButton.addEventListener('click', function () {
+                      /*
+                       * When the customer clicks on the button, redirect
+                       * them to Checkout.
+                       */
+                      stripe.redirectToCheckout({
+                        lineItems: [{price: 'price_1IAOkpGrd1ppQSttP8Zpfutv', quantity: 1}],
+                        mode: 'payment',
+                        /*
+                         * Do not rely on the redirect to the successUrl for fulfilling
+                         * purchases, customers may not always reach the success_url after
+                         * a successful payment.
+                         * Instead use one of the strategies described in
+                         * https://stripe.com/docs/payments/checkout/fulfill-orders
+                         */
+                        successUrl: window.location.protocol + '//grayaerialvisual.com/success',
+                        cancelUrl: window.location.protocol + '//grayaerialvisual.com/canceled',
+                        shippingAddressCollection: {
+                          allowedCountries: ['US', 'CA'],
+                        }
+                      })
+                      .then(function (result) {
+                        if (result.error) {
+                          /*
+                           * If `redirectToCheckout` fails due to a browser or network
+                           * error, display the localized error message to your customer.
+                           */
+                          var displayError = document.getElementById('error-message');
+                          displayError.textContent = result.error.message;
+                        }
+                      });
+                    });
+                  })();
+                  </script>
+
+
+
+
+                </div>
+
+
+                <div class="tab-pane fade container bg-light text-center" style="padding:2vh;" id="pills-canvassun" role="tabpanel" aria-labelledby="pills-canvassun-tab">
+                  <h5 class="text-center" style='padding:2vh;'>Canvas</h5>
+
+
+                  <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+                  <button
+                    style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+                    id="checkout-button-price_1IAOlEGrd1ppQSttDPLBgxO4"
+                    role="link"
+                    type="button"
+                  >
+                    Purchase 8x12 Canvas
+                  </button>
+
+                  <div id="error-message"></div>
+
+                  <script>
+                  (function() {
+                    var stripe = Stripe('pk_live_51HXYKYGrd1ppQStt3mZYCKLQbK9qzQOuubKiSKluhqq040porS8EuSoi9YtR0iedMGeUAKcnFORNC6a8iy3QFQhI00c2KiRJYE');
+
+                    var checkoutButton = document.getElementById('checkout-button-price_1IAOlEGrd1ppQSttDPLBgxO4');
+                    checkoutButton.addEventListener('click', function () {
+                      /*
+                       * When the customer clicks on the button, redirect
+                       * them to Checkout.
+                       */
+                      stripe.redirectToCheckout({
+                        lineItems: [{price: 'price_1IAOlEGrd1ppQSttDPLBgxO4', quantity: 1}],
+                        mode: 'payment',
+                        /*
+                         * Do not rely on the redirect to the successUrl for fulfilling
+                         * purchases, customers may not always reach the success_url after
+                         * a successful payment.
+                         * Instead use one of the strategies described in
+                         * https://stripe.com/docs/payments/checkout/fulfill-orders
+                         */
+                        successUrl: window.location.protocol + '//grayaerialvisual.com/success',
+                        cancelUrl: window.location.protocol + '//grayaerialvisual.com/canceled',
+                        shippingAddressCollection: {
+                          allowedCountries: ['US', 'CA'],
+                        }
+                      })
+                      .then(function (result) {
+                        if (result.error) {
+                          /*
+                           * If `redirectToCheckout` fails due to a browser or network
+                           * error, display the localized error message to your customer.
+                           */
+                          var displayError = document.getElementById('error-message');
+                          displayError.textContent = result.error.message;
+                        }
+                      });
+                    });
+                  })();
+                  </script>
+
+                  <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+                  <button
+                    style="margin:2vh;background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+                    id="checkout-button-price_1IAOlUGrd1ppQStt57ilQpJL"
+                    role="link"
+                    type="button"
+                  >
+                    Purchase 12x16 Canvas
+                  </button>
+
+                  <div id="error-message"></div>
+
+                  <script>
+                  (function() {
+                    var stripe = Stripe('pk_live_51HXYKYGrd1ppQStt3mZYCKLQbK9qzQOuubKiSKluhqq040porS8EuSoi9YtR0iedMGeUAKcnFORNC6a8iy3QFQhI00c2KiRJYE');
+
+                    var checkoutButton = document.getElementById('checkout-button-price_1IAOlUGrd1ppQStt57ilQpJL');
+                    checkoutButton.addEventListener('click', function () {
+                      /*
+                       * When the customer clicks on the button, redirect
+                       * them to Checkout.
+                       */
+                      stripe.redirectToCheckout({
+                        lineItems: [{price: 'price_1IAOlUGrd1ppQStt57ilQpJL', quantity: 1}],
+                        mode: 'payment',
+                        /*
+                         * Do not rely on the redirect to the successUrl for fulfilling
+                         * purchases, customers may not always reach the success_url after
+                         * a successful payment.
+                         * Instead use one of the strategies described in
+                         * https://stripe.com/docs/payments/checkout/fulfill-orders
+                         */
+                        successUrl: window.location.protocol + '//grayaerialvisual.com/success',
+                        cancelUrl: window.location.protocol + '//grayaerialvisual.com/canceled',
+                        shippingAddressCollection: {
+                          allowedCountries: ['US', 'CA'],
+                        }
+                      })
+                      .then(function (result) {
+                        if (result.error) {
+                          /*
+                           * If `redirectToCheckout` fails due to a browser or network
+                           * error, display the localized error message to your customer.
+                           */
+                          var displayError = document.getElementById('error-message');
+                          displayError.textContent = result.error.message;
+                        }
+                      });
+                    });
+                  })();
+                  </script>
+
+
+                  <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+                  <button
+                    style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+                    id="checkout-button-price_1IAOlnGrd1ppQSttxOE7PEHo"
+                    role="link"
+                    type="button"
+                  >
+                    Purchase 16x24 Canvas
+                  </button>
+
+                  <div id="error-message"></div>
+
+                  <script>
+                  (function() {
+                    var stripe = Stripe('pk_live_51HXYKYGrd1ppQStt3mZYCKLQbK9qzQOuubKiSKluhqq040porS8EuSoi9YtR0iedMGeUAKcnFORNC6a8iy3QFQhI00c2KiRJYE');
+
+                    var checkoutButton = document.getElementById('checkout-button-price_1IAOlnGrd1ppQSttxOE7PEHo');
+                    checkoutButton.addEventListener('click', function () {
+                      /*
+                       * When the customer clicks on the button, redirect
+                       * them to Checkout.
+                       */
+                      stripe.redirectToCheckout({
+                        lineItems: [{price: 'price_1IAOlnGrd1ppQSttxOE7PEHo', quantity: 1}],
+                        mode: 'payment',
+                        /*
+                         * Do not rely on the redirect to the successUrl for fulfilling
+                         * purchases, customers may not always reach the success_url after
+                         * a successful payment.
+                         * Instead use one of the strategies described in
+                         * https://stripe.com/docs/payments/checkout/fulfill-orders
+                         */
+                        successUrl: window.location.protocol + '//grayaerialvisual.com/success',
+                        cancelUrl: window.location.protocol + '//grayaerialvisual.com/canceled',
+                        shippingAddressCollection: {
+                          allowedCountries: ['US', 'CA'],
+                        }
+                      })
+                      .then(function (result) {
+                        if (result.error) {
+                          /*
+                           * If `redirectToCheckout` fails due to a browser or network
+                           * error, display the localized error message to your customer.
+                           */
+                          var displayError = document.getElementById('error-message');
+                          displayError.textContent = result.error.message;
+                        }
+                      });
+                    });
+                  })();
+                  </script>
+
+                  <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+                  <button
+                    style="margin:2vh;background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+                    id="checkout-button-price_1IAOm6Grd1ppQSttaMN1mtGN"
+                    role="link"
+                    type="button"
+                  >
+                    Purchase 24x36 Canvas
+                  </button>
+
+                  <div id="error-message"></div>
+
+                  <script>
+                  (function() {
+                    var stripe = Stripe('pk_live_51HXYKYGrd1ppQStt3mZYCKLQbK9qzQOuubKiSKluhqq040porS8EuSoi9YtR0iedMGeUAKcnFORNC6a8iy3QFQhI00c2KiRJYE');
+
+                    var checkoutButton = document.getElementById('checkout-button-price_1IAOm6Grd1ppQSttaMN1mtGN');
+                    checkoutButton.addEventListener('click', function () {
+                      /*
+                       * When the customer clicks on the button, redirect
+                       * them to Checkout.
+                       */
+                      stripe.redirectToCheckout({
+                        lineItems: [{price: 'price_1IAOm6Grd1ppQSttaMN1mtGN', quantity: 1}],
+                        mode: 'payment',
+                        /*
+                         * Do not rely on the redirect to the successUrl for fulfilling
+                         * purchases, customers may not always reach the success_url after
+                         * a successful payment.
+                         * Instead use one of the strategies described in
+                         * https://stripe.com/docs/payments/checkout/fulfill-orders
+                         */
+                        successUrl: window.location.protocol + '//grayaerialvisual.com/success',
+                        cancelUrl: window.location.protocol + '//grayaerialvisual.com/canceled',
+                        shippingAddressCollection: {
+                          allowedCountries: ['US', 'CA'],
+                        }
+                      })
+                      .then(function (result) {
+                        if (result.error) {
+                          /*
+                           * If `redirectToCheckout` fails due to a browser or network
+                           * error, display the localized error message to your customer.
+                           */
+                          var displayError = document.getElementById('error-message');
+                          displayError.textContent = result.error.message;
+                        }
+                      });
+                    });
+                  })();
+                  </script>
+
+                </div>
+              </div>
+
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-6" onContextMenu="alert('This image is under copyright. Downloading it is illegal! ©Gray AerialVisual 2021');return false;" style="min-height:25vh;background-image:url('./resources/images/Sunglow.jpg');background-size:contain;background-position:center;background-repeat:no-repeat;">
+            <p></p>
+          </div>
+        </div>
+
 
       </div>
 
